@@ -1,0 +1,22 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "yarn watch:all",
+    "build": "yarn build:app",
+    "deploy:all": "npx lerna run deploy",
+    "watch:all": "pilet debug 'packages/*-pilet/src/index.tsx'",
+    "watch:app": "piral debug packages/app/src/index.html",
+    "watch:mf": "pilet debug packages/${name:-x}-pilet/src/index.tsx",
+    "build:app": "piral build packages/app/src/index.html",
+    "build:mf": "pilet build packages/${name:-x}-pilet/src/index.tsx"
+  },
+  "devDependencies": {
+    "lerna": "^8",
+    "piral-cli": "^1",
+    "piral-cli-esbuild": "^1"
+  }
+}

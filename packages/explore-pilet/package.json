@@ -1,0 +1,29 @@
+{
+  "name": "explore-pilet",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "deploy": "pilet publish --fresh --url https://feed.piral.cloud/api/v1/pilet/tractor-v2-demo --interactive"
+  },
+  "source": "src/index.tsx",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "importmap": {
+    "imports": {},
+    "inherit": [
+      "app"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-router-dom": "^5",
+    "app": "1.0.0",
+    "react": "^18",
+    "react-router-dom": "^5",
+    "typescript": "^5"
+  }
+}

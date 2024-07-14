@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.piral.io/schemas/piral-v0.json",
+  "isolation": "modern",
+  "emulator": "website",
+  "pilets": {
+    "files": [],
+    "scripts": {},
+    "template": "default",
+    "validators": {},
+    "devDependencies": {},
+    "preScaffold": "",
+    "postScaffold": "",
+    "preUpgrade": "",
+    "postUpgrade": "",
+    "packageOverrides": {}
+  }
+}
