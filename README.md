@@ -40,6 +40,18 @@ List of techniques used in this implementation.
 [esbuild]: https://esbuild.github.io/
 [Piral.Cloud]: https://www.piral.cloud/
 
+### Limitations
+
+This implementation is deliberately kept simple to focus on the micro frontends aspects. URLs are hardcoded, components could be more DRY and no linting, testing or type-safety is implemented. In a real-world scenario, these aspects should be addressed properly.
+
+### Performance
+
+Several performance optimizations could still be applied, however, in the out-of-the-box state with three micro frontends and multiple components / pages included we'll end up with a lighthouse score of 100/100, which is great.
+
+![Lighthouse Score](./lighthouse.png)
+
+As a comparison a most lightweight SSR-only solution using the same codebase would be around 99/100. Another SPA sample that uses [Picard.js](https://picard.js.org/) with Native Federation ended up at 88/100. Hence, Piral gives optimal performance - no effort needed.
+
 ## How to run locally
 
 ### Installation
