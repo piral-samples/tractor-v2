@@ -24,11 +24,11 @@ jobs:
       - name: Build Website
         run: |
           yarn build
-          echo "tractor-v2.samples.piral.cloud" > packages/app/dist/release/CNAME
-          cp packages/app/dist/release/index.html packages/app/dist/release/404.html
+          echo "tractor-v2.samples.piral.cloud" > dist/release/CNAME
+          cp dist/release/index.html dist/release/404.html
       - name: Deploy Website
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          gh-pages -d "packages/app/dist/release" -u "github-actions-bot <support+actions@github.com>"
+          gh-pages -d "dist/release" -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
